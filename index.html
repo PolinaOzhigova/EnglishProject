@@ -13,20 +13,35 @@
 </head>
 <body>
   <!-- меню -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#intro">About us</a></li>
-      <li><a href="#map">Map</a></li>
-      <li><a href="#search">Search</a></li>
-      <li><a href="#category">Collections</a></li>
-      <li><a href="#">Log in/Sign up</a></li>
-    </ul>
-    <div class="active-bar"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#intro">About us</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#map">Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#search">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#category">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in/Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- ознакомительная часть -->
   <div class="intro" id="intro">
-    <div>
+    <div class="container text-center">
       <h1>DISCOVER NEW</h1>
       <p>WITH US</p>
       <p>information site about tourist sites of the Irkutsk region</p>
@@ -37,25 +52,41 @@
   <div id="map"></div>
 
   <!-- строка поиска -->
-  <input type="text" id="search" placeholder="Search places...">
+  <div class="container mt-4">
+    <input type="text" id="search" class="form-control" placeholder="Search places...">
+  </div>
 
   <!-- подборки -->
-  <div class="category">
+  <div class="container mt-4">
     <h2>Popular categories</h2>
-    <a href="#">Nature</a>
-    <a href="#">Culture</a>
-    <a href="#">Food</a>
-    <a href="#">Sports</a>
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <a href="#" class="btn btn-primary">Nature</a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a href="#" class="btn btn-primary">Culture</a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a href="#" class="btn btn-primary">Food</a>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <a href="#" class="btn btn-primary">Sports</a>
+      </div>
+    </div>
   </div>
 
   <!-- футер -->
-  <footer>
-    <p>Contact us: email@example.com | +1234567890</p>
+  <footer class="mt-4">
+    <div class="container">
+      <p>Contact us: email@example.com | +1234567890</p>
+    </div>
   </footer>
 
   <!-- скрипт для карты -->
   <script>
     // код с интерактивной картой
   </script>
+</body>
+
 </body>
 </html>
