@@ -52,47 +52,7 @@
       <p>information website for tourism in the Irkutsk region</p>
     </div>
   </div>
-
-<!-- подключение библиотеки Leaflet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-J6U5v6NYxRJ7/k9Y9O4g7Vv+o58HblJwMJ+c3q1nh8OvAvxKbPhNlYum0J0Wtg+DD28IgB/7wP/iCohsWtVvLw==" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-J3Cqy6U0vv0NlGg8/gZ6z1b0Rwv6U5r5U5enTPJfEih7Vv4n4Q4+VqJdZVyHnZvDxKLo+rcVYOWLCpJmpyC+Dg==" crossorigin="anonymous"></script>
-
-<!-- создание контейнера для карты -->
-<div id="map" style="height: 500px;"></div>
-
-<!-- JavaScript код для создания карты и добавления маркеров -->
-<script>
-    // создание карты
-    var mymap = L.map('map').setView([51.9, 103.7], 8);
-
-    // добавление слоя OpenStreetMap на карту
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-    }).addTo(mymap);
-
-    // добавление маркеров на карту
-    var marker1 = L.marker([51.859489, 104.863853]).addTo(mymap);
-    var marker2 = L.marker([51.718889, 100.596944]).addTo(mymap);
-    var marker3 = L.marker([51.9275, 102.6409]).addTo(mymap);
-
-    // добавление всплывающих подсказок к маркерам
-    marker1.bindPopup("<b>Place 1</b><br>GPS Coordinates: 51.859489, 104.863853").openPopup();
-    marker2.bindPopup("<b>Place 2</b><br>51°43′08″ N, 100°35′49″ E").openPopup();
-    marker3.bindPopup("<b>Place 3</b><br>GPS Coordinates: 51.9275, 102.6409").openPopup();
-
-    // Добавление ссылок на страницы мест при клике на маркеры
-    marker1.on('click', function() {
-        window.location.href = '/place1'; // ссылка на страницу места 1
-    });
-
-    marker2.on('click', function() {
-        window.location.href = '/place2'; // ссылка на страницу места 2
-    });
-  </script>
-
+  
   <!-- строка поиска -->
   <div class="container mt-4">
     <input type="text" id="search" class="form-control" placeholder="Search places...">
