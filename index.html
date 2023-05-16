@@ -1,127 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link href="css.css" type="text/css" rel="stylesheet">
   <title>Baikal travel</title>
 
   <!-- Bootstrap CSS (jsDelivr CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  
-  <style>
-    .navbar {
-      background-color: #28566E !important;
-      box-shadow: 0px 3px 5px #1c3d4e;
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
 
 <body class="body">
-    <!-- меню -->
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+
+  <!-- меню -->
+  <header class="header">
+    <nav class="navbar sticky-top navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Панель навигации</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+        <a class="navbar-brand" href="#">Главная</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Главная</a>
+              <a class="nav-link" href="#">Карта</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Рекомендуемые</a>
+              <a class="nav-link" href="#">Поиск</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Цена</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Отключенная</a>
+              <a class="nav-link" href="#">Подборки</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+  </header>
 
-  <!-- ознакомительная часть -->
-  <div class="intro" id="intro">
-    <div class="container text-center">
-      <h1>DISCOVER NEW</h1>
-      <p>WITH US</p>
-      <p>information website for tourism in the Irkutsk region</p>
+
+
+
+
+
+
+  <main class="main">
+    <!-- ознакомительная часть -->
+    <div class="intro" id="intro">
+      <div class="container text-center">
+        <h1>DISCOVER NEW</h1>
+        <p>WITH US</p>
+        <p>information website for tourism in the Irkutsk region</p>
+      </div>
     </div>
-  </div>
 
-<!-- подключение библиотеки Leaflet -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-J6U5v6NYxRJ7/k9Y9O4g7Vv+o58HblJwMJ+c3q1nh8OvAvxKbPhNlYum0J0Wtg+DD28IgB/7wP/iCohsWtVvLw==" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-J3Cqy6U0vv0NlGg8/gZ6z1b0Rwv6U5r5U5enTPJfEih7Vv4n4Q4+VqJdZVyHnZvDxKLo+rcVYOWLCpJmpyC+Dg==" crossorigin="anonymous"></script>
+    <!-- подключение библиотеки Leaflet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"
+      integrity="sha512-J6U5v6NYxRJ7/k9Y9O4g7Vv+o58HblJwMJ+c3q1nh8OvAvxKbPhNlYum0J0Wtg+DD28IgB/7wP/iCohsWtVvLw=="
+      crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"
+      integrity="sha512-J3Cqy6U0vv0NlGg8/gZ6z1b0Rwv6U5r5U5enTPJfEih7Vv4n4Q4+VqJdZVyHnZvDxKLo+rcVYOWLCpJmpyC+Dg=="
+      crossorigin="anonymous"></script>
 
-<!-- создание контейнера для карты -->
-<div id="map" style="height: 500px;"></div>
+    <!-- создание контейнера для карты -->
+    <div id="map" style="height: 500px;"></div>
 
-<!-- JavaScript код для создания карты и добавления маркеров -->
-<script>
-    // создание карты
-    var mymap = L.map('map').setView([51.9, 103.7], 8);
+    <!-- JavaScript код для создания карты и добавления маркеров -->
+    <script>
+      // создание карты
+      var mymap = L.map('map').setView([51.9, 103.7], 8);
 
-    // добавление слоя OpenStreetMap на карту
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      // добавление слоя OpenStreetMap на карту
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
-    }).addTo(mymap);
+      }).addTo(mymap);
 
-    // добавление маркеров на карту
-    var marker1 = L.marker([51.859489, 104.863853]).addTo(mymap);
-    var marker2 = L.marker([51.718889, 100.596944]).addTo(mymap);
-    var marker3 = L.marker([51.9275, 102.6409]).addTo(mymap);
+      // добавление маркеров на карту
+      var marker1 = L.marker([51.859489, 104.863853]).addTo(mymap);
+      var marker2 = L.marker([51.718889, 100.596944]).addTo(mymap);
+      var marker3 = L.marker([51.9275, 102.6409]).addTo(mymap);
 
-    // добавление всплывающих подсказок к маркерам
-    marker1.bindPopup("<b>Place 1</b><br>GPS Coordinates: 51.859489, 104.863853").openPopup();
-    marker2.bindPopup("<b>Place 2</b><br>51°43′08″ N, 100°35′49″ E").openPopup();
-    marker3.bindPopup("<b>Place 3</b><br>GPS Coordinates: 51.9275, 102.6409").openPopup();
+      // добавление всплывающих подсказок к маркерам
+      marker1.bindPopup("<b>Place 1</b><br>GPS Coordinates: 51.859489, 104.863853").openPopup();
+      marker2.bindPopup("<b>Place 2</b><br>51°43′08″ N, 100°35′49″ E").openPopup();
+      marker3.bindPopup("<b>Place 3</b><br>GPS Coordinates: 51.9275, 102.6409").openPopup();
 
-    // Добавление ссылок на страницы мест при клике на маркеры
-    marker1.on('click', function() {
+      // Добавление ссылок на страницы мест при клике на маркеры
+      marker1.on('click', function () {
         window.location.href = '/place1'; // ссылка на страницу места 1
-    });
+      });
 
-    marker2.on('click', function() {
+      marker2.on('click', function () {
         window.location.href = '/place2'; // ссылка на страницу места 2
-    });
-  </script>
+      });
+    </script>
 
-  <!-- строка поиска -->
-  <div class="container mt-4">
-    <input type="text" id="search" class="form-control" placeholder="Search places...">
-  </div>
+    <!-- строка поиска -->
+    <div class="container mt-4">
+      <input type="text" id="search" class="form-control" placeholder="Search places...">
+    </div>
 
-  <!-- подборки -->
-  <div class="container mt-4">
-    <h2>Popular categories</h2>
-    <div class="row">
-      <div class="col-sm-6 col-md-3">
-        <a href="#" class="btn btn-primary">Nature</a>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <a href="#" class="btn btn-primary">Culture</a>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <a href="#" class="btn btn-primary">Food</a>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <a href="#" class="btn btn-primary">Sports</a>
+    <!-- подборки -->
+    <div class="container mt-4">
+      <h2>Popular categories</h2>
+      <div class="row">
+        <div class="col-sm-6 col-md-3">
+          <a href="#" class="btn btn-primary">Nature</a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <a href="#" class="btn btn-primary">Culture</a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <a href="#" class="btn btn-primary">Food</a>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <a href="#" class="btn btn-primary">Sports</a>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
+
+
+
+
 
   <!-- футер -->
-  <footer class="mt-4">
-    <div class="container">
-      <p>Contact us: email@example.com | +1234567890</p>
-    </div>
+  <footer class="footer">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
   </footer>
 
   <!-- скрипт для карты -->
@@ -129,8 +147,11 @@
     // код с интерактивной картой
   </script>
   <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </body>
 
 </body>
+
 </html>
