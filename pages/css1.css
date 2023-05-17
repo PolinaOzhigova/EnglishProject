@@ -44,8 +44,8 @@
 .photos img{
     height: 30vh;
 }
-.cont, .main-fl{
-    color: #28566E;
+.cont, h1{
+    color: #28566E !important;
 }
 
 .items {
@@ -70,6 +70,10 @@
     color: #16303e;
     transition: all 0.2s ease;
     transform: scale(1.1);
+}
+.cont a{
+    color:#28566E !important;
+    padding-top: 10px;
 }
 .advert {
     width: 500px;
