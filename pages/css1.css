@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.body{
+    background-color: #fff;
+    height:auto;
+    width:100%;
+}
+
+.navbar{
+   color: #fff;
+}
+[data-bs-theme=dark] {
+    --bs-tertiary-bg-rgb: 58, 56, 59 !important;
+}
+
+.footer{
+    background-color: #3a383b;
+    color: #fff;
+}
+
+.btn {
+    color:  #3eb49e !important;
+    border: 1px solid #3eb49e !important;
+}
+.btn:hover{
+    background-color: #3eb49e !important;
+    color: #ffffff !important;
+    border: 1px solid #3eb49e !important;
+}
+[type="search"] {
+    outline-offset: none;
+}
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:5vh;
+    gap:5vh;
+}
+/* Маленькие экраны */
+.photos img{
+    height: 30vh;
+}
+.cont, .main-fl{
+    color: #28566E;
+}
