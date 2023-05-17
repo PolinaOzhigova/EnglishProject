@@ -12,19 +12,20 @@
 </head>
 
 
-<body class="body">
+<body class="body" data-bs-theme="dark">
 
   <!-- меню -->
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" href="#">About us</a>
-          <a class="nav-link" href="#">Search</a>
-          <a class="nav-link" href="#">Categories</a>
+          <a class="nav-link" href="#img-y">About us</a>
+          <a class="nav-link" href="#search-y">Search</a>
+          <a class="nav-link" href="#cat-y">Categories</a>
         </div>
       </div>
     </div>
@@ -34,54 +35,175 @@
 
   <main class="main">
     <!-- ознакомительная часть -->
-    <div class="image-container">
+    <div class="image-container" id="img-y">
       <div class="container text-center">
-        <h1>DISCOVER NEW</h1>
-        <p>WITH US</p>
-        <p>information website for tourism in the Irkutsk region</p>
+        <div class="container">
+          <div>
+            <h1 style="font-size:70px">DISCOVER NEW</h1>
+            <p style="font-size:45px">WITH US</p>
+          </div>
+          <p style="font-size:30px; margin-top: -40px;">information website for tourism in the Irkutsk region</p>
+        </div>
       </div>
     </div>
 
-    
-
     <!-- строка поиска -->
-    <div class="container mt-4">
-      <input type="text" id="search" class="form-control" placeholder="Search places...">
+    <div class="d" id="search-y">
+      <div class="s-text fs-5">
+        <span>Know the name of the place you want to visit? Enter and we will tell you about it.</span>
+      </div>
+      <div class="container">
+        <div class="row height d-flex justify-content-center align-items-center">
+          <div class="col-md-8">
+            <div class="search">
+              <i class="fa fa-search"></i>
+              <input type="text" class="form-control" placeholder="Input Here">
+              <button class="btn btn-dark">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- подборки -->
-    <div class="container mt-4">
-      <h2>Popular categories</h2>
-      <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <a href="#" class="btn btn-primary">Nature</a>
+    <div class="t" id="cat-y">
+      <div class="cat-f">
+        <div class="cat-cat-f">
+          <h1>Popular categories</h1>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="#" class="btn btn-primary">Culture</a>
+        <div class="b-f">
+        <div>
+          <a href="#wh-y" class="btn">Weekend hike</a>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="#" class="btn btn-primary">Food</a>
+          <div>
+          <a href="#tdh-y" class="btn">Two-day hike</a>
         </div>
-        <div class="col-sm-6 col-md-3">
-          <a href="#" class="btn btn-primary">Sports</a>
+          <div>
+          <a href="#iydhac-y" class="btn">If you don't have a car</a>
+        </div>
         </div>
       </div>
+
+      <div class="kar-f" id="wh-y">
+        <div>
+          <span class="fs-1">Weekend hike</span>
+        </div>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./pictures/tourist.jpg" style="width:100%">
+            <div class="text">Vityas, Peak of Love</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./pictures/2.jpg" style="width:100%">
+            <div class="text">fdfsfsfsfds</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./pictures/3.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides1(-1)">❮</a>
+          <a class="next" onclick="plusSlides1(1)">❯</a>
+
+        </div>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide1(1)"></span>
+          <span class="dot" onclick="currentSlide1(2)"></span>
+          <span class="dot" onclick="currentSlide1(3)"></span>
+        </div>
+      </div>
+
+
+      <div class="kar-f" id="tdh-y">
+        <div>
+          <span class="fs-1">Two-day hike</span>
+        </div>
+        <div class="slideshow-container">
+
+          <div class="mySlides2 fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./pictures/4.jpg" style="width:100%">
+            <div class="text">Chersky peak, Ulyabor, peak Galina</div>
+          </div>
+
+          <div class="mySlides2 fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./pictures/5.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides2 fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./pictures/6.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides2(-1)">❮</a>
+          <a class="next" onclick="plusSlides2(1)">❯</a>
+
+        </div>
+        <div style="text-align:center">
+          <span class="dot2" onclick="currentSlide2(1)"></span>
+          <span class="dot2" onclick="currentSlide2(2)"></span>
+          <span class="dot2" onclick="currentSlide2(3)"></span>
+        </div>
+      </div>
+
+      <div class="kar-f" id="iydhac-y">
+        <div>
+          <span class="fs-1">If you don't have a car</span>
+        </div>
+        <div class="slideshow-container">
+
+          <div class="mySlides3 fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./pictures/tourist.jpg" style="width:100%">
+            <div class="text">BBT, Circum Baikal Railway</div>
+          </div>
+
+          <div class="mySlides3 fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./pictures/2.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides3 fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./pictures/3.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides3(-1)">❮</a>
+          <a class="next" onclick="plusSlides3(1)">❯</a>
+
+        </div>
+        <div style="text-align:center">
+          <span class="dot3" onclick="currentSlide3(1)"></span>
+          <span class="dot3" onclick="currentSlide3(2)"></span>
+          <span class="dot3" onclick="currentSlide3(3)"></span>
+        </div>
+
     </div>
   </main>
 
-
-
   <!-- футер -->
   <footer class="footer py-3" data-bs-theme="dark">
-      <ul class="nav justify-content-center border-bottom border-white pb-3 mb-3">
-        <li class="nav-item px-2">@example.com</li>
-        <li class="nav-item px-2">+78005553535</li>
-      </ul>
-      <p class="text-center" style="margin-bottom:0;">© 2023 Baikal travel</p>
+    <ul class="nav justify-content-center border-bottom border-white pb-3 mb-3">
+      <li class="nav-item px-2">@example.com</li>
+      <li class="nav-item px-2">+78005553535</li>
+    </ul>
+    <p class="text-center" style="margin-bottom:0;">© 2023 Baikal travel</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script src="./java.js"></script>
 
 </body>
 
