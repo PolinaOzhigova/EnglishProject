@@ -12,11 +12,11 @@
    color: #fff;
 }
 [data-bs-theme=dark] {
-    --bs-tertiary-bg-rgb: 58, 56, 59 !important;
+    --bs-tertiary-bg-rgb:40, 86, 110 !important;
 }
 
 .footer{
-    background-color: #3a383b;
+    background-color: #28566E;
     color: #fff;
 }
 
@@ -30,7 +30,7 @@
     border: 1px solid #3eb49e !important;
 }
 [type="search"] {
-    background-color: #1d1c1d !important;
+    background-color: #183341 !important;
     outline-offset: none;
 }
 .photos{
