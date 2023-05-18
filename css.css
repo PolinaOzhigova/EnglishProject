@@ -177,7 +177,7 @@ img {vertical-align: middle;
       
       /* Caption text */
       .text {
-        color: rgb(180,196,204);
+        color: white;
         /* rgb(87, 80, 62) */
         font-size: 2.5vw;
         padding: 8px 12px;
