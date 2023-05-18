@@ -144,6 +144,7 @@ img {vertical-align: middle;
       /* Slideshow container */
       .slideshow-container {
         max-width: 1000px;
+        
         position: relative;
         margin: auto;
         
@@ -177,7 +178,7 @@ img {vertical-align: middle;
       
       /* Caption text */
       .text {
-        color: rgb(66,70,73);
+        color: rgb(180,196,204);
         /* rgb(87, 80, 62) */
         font-size: 2.5vw;
         padding: 8px 12px;
